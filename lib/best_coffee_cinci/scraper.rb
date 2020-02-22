@@ -1,0 +1,5 @@
+class BestCoffeeCinci::scraper
+  
+  
+  
+end
