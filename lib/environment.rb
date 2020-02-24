@@ -9,7 +9,3 @@ module BestCoffeeCinci
   class Error < StandardError; end
   # Your code goes here...
 end
-
-
-require_relative "london_spas/version"
-require_relative "london_spas/cli"
