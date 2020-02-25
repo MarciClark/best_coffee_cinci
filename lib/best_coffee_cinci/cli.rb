@@ -12,7 +12,12 @@ class BestCoffeeCinci::CLI
     goodbye
   end 
   
+  def get_shops
+    @shops = BestCoffeeCinci::Shop.all
+  end 
+  
   def list_shops
+    
   end 
   
   def get_user_input
