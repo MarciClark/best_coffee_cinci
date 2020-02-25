@@ -1,0 +1,3 @@
+class BestCoffeeCinci::Shop
+  
+end 
