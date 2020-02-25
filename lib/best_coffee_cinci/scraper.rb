@@ -1,4 +1,4 @@
-class BestCoffeeCinci::scraper
+class BestCoffeeCinci::Scraper
   
   
   
