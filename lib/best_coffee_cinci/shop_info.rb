@@ -1,3 +1,3 @@
-class BestCoffeeCinci::Shop_info
+class Shop_info
   
 end 

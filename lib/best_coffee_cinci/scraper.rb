@@ -1,4 +1,4 @@
-class BestCoffeeCinci::Scraper
+class Scraper
   
   
   

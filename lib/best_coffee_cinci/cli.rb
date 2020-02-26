@@ -1,4 +1,4 @@
-class BestCoffeeCinci::CLI 
+class CLI 
   
   def call
     puts "Need a jolt?  Here are Cincinnati's best coffee shops!"
@@ -13,7 +13,7 @@ class BestCoffeeCinci::CLI
   end 
   
   def get_shops
-    @shops = BestCoffeeCinci::Shop.all
+    @shops = Shop.all
   end 
   
   def list_shops
