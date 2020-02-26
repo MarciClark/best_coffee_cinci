@@ -6,4 +6,4 @@ require_relative '../lib/best_coffee_cinci/scraper'
 require_relative '../lib/best_coffee_cinci/shop_info'
 require_relative '../lib/best_coffee_cinci/shop'
 
-BestCoffeeCinci::CLI.new.call
+BestCoffeeCinci.new.call
