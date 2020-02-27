@@ -14,8 +14,3 @@ module BestCoffeeCinci
   # Your code goes here...
 end
 
-
-require 'bundler'
-require 'pry'
-require 'nokogiri'
-require 'open-uri'
