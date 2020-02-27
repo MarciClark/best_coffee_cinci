@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/best_coffee_cinci'
+require_relative '../lib/environment'
 
 BestCoffeeCinci::CLI.new.call
 
