@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["'marcig612@gmail.com'"]
 
   spec.summary       = %q{A list of the best coffee shops}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.description   = %q{A complete list of the best ranked coffee shops}
   spec.homepage      = "https://github.com/MarciClark/best_coffee_cinci.git"
   spec.license       = "MIT"
 
