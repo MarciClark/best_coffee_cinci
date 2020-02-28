@@ -31,9 +31,14 @@ class BestCoffeeCinci::CLI
   def get_shop_info
   end 
   
-    def goodbye
+  def show_more
+    puts "Ready to grab some coffee? Type 'exit' to exit or press any key to see more shops."
+    @input = gets.strip
+  end 
+  
+  def goodbye
     puts "Have a brew-tiful day!"
   end 
-end
+
   
 end
