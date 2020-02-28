@@ -29,6 +29,10 @@ class BestCoffeeCinci::CLI
     show_shops(user_shop) if valid_input(user_shop, @shops)
   end 
   
+  def valid_input(input, data)
+    input.to_i <= data.length && input.to_i > 0
+  end 
+  
   def get_shop_info
   end 
   
