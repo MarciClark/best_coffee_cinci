@@ -17,7 +17,10 @@ class BestCoffeeCinci::CLI
   end 
   
   def list_shops
-    
+    puts 'Choose a shop you would like more info about.'
+    @shops.each.with_index(1) do |shop, index| 
+      puts "#{index}. #{shop.name}"
+    end
   end 
   
   def get_user_input
