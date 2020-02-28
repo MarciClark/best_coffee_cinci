@@ -24,6 +24,8 @@ class BestCoffeeCinci::CLI
   end 
   
   def get_user_input
+    user_shop = gets.strip.to_i
+    show_shops(user_shop) if valid_input(user_shop, @shops)
   end 
   
   def get_shop_info
