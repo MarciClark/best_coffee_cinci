@@ -33,6 +33,16 @@ class BestCoffeeCinci::CLI
     input.to_i <= data.length && input.to_i > 0
   end 
   
+  def show_shops(user_shops)
+    shop = @shops[user_shop - 1]
+    shop.get_shop_info
+    puts "Here is the info for #{shop.name}"
+    shop.shop_info.each.with_index(1) do |shop_info, idex|
+      puts "#{idx}. #{shop_info.name}"
+    end
+    get_user_input(shop)
+  end 
+  
   def get_shop_info
   end 
   
