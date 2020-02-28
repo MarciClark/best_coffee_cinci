@@ -26,4 +26,9 @@ class BestCoffeeCinci::CLI
   def get_shop_info
   end 
   
+    def goodbye
+    puts "Have a brew-tiful day!"
+  end 
+end
+  
 end
