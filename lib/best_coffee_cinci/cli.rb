@@ -8,6 +8,7 @@ class BestCoffeeCinci::CLI
       list_shops
       get_user_input
       get_shop_info
+      shop_info
       show_more
     end 
     goodbye
@@ -44,6 +45,9 @@ class BestCoffeeCinci::CLI
   end 
   
   def get_shop_info
+  end 
+  
+  def shop_info 
   end 
   
   def show_more
