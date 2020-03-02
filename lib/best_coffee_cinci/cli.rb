@@ -43,8 +43,13 @@ class BestCoffeeCinci::CLI
     get_user_input(shop)
   end 
   
-  # def get_shop_info
-  # end 
+  def get_shop_info
+  end 
+  
+  def shop_info 
+    puts shop.name
+    shop.the_info.each {|i| puts "- #{i}"}
+  end 
   
   def show_more
     puts "Ready to grab some coffee? Type 'exit' to exit or press any key to see more shops."
