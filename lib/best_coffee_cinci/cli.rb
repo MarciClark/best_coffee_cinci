@@ -8,7 +8,6 @@ class BestCoffeeCinci::CLI
       list_shops
       get_user_input
       get_shop_info
-      shop_info
       show_more
     end 
     goodbye
