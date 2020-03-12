@@ -33,7 +33,7 @@ class BestCoffeeCinci::CLI
     input.to_i <= data.length && input.to_i > 0
   end 
   
-  def show_shop_info(user_shops)
+  def show_shop_info(user_shop)
     shop = @shops[user_shop - 1]
     shop.get_shop_info
     puts "Here is the info for #{shop.name}"
