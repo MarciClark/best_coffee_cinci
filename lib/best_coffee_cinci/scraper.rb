@@ -3,7 +3,7 @@ class Scraper
   def self.scrape_shops 
     doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops"))
     
-    shops = doc.css("div.listing venue") 
+    shops = doc.css("p.venueName") 
     
     shops.each do |s|
        name = s.text
