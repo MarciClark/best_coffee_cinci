@@ -20,7 +20,7 @@ class BestCoffeeCinci::CLI
   def get_user_shop
     puts 'Choose a shop you would like more info about.'
     @shops.each.with_index(1) do |shop, index| 
-      puts "#{index}. #{shop}"
+      puts "#{index}. #{shop.name}"
     end
   end 
   
