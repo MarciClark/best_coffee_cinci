@@ -5,7 +5,7 @@ class BestCoffeeCinci::CLI
     @input = ""
     until @input == "exit"
       get_shops 
-      get_user_shop
+      list_shop
       get_user_input
       get_shop_info
       show_more
@@ -17,7 +17,7 @@ class BestCoffeeCinci::CLI
     @shops = ['Coffee Emporium', '1215 Wine Bar and Coffee Lab', 'Coffee Emporium 2', 'Urbana Coffee', 'Collective Espresso', 'Deeper Roots Coffee', 'Sidewinder Coffee + Tea', 'BLOC Coffee Company', 'Luckman Coffee Company', 'Collective Espresso 2', 'Deeper Roots 2', 'Highland Coffee House', 'Rohs Street Coffee', 'Starbucks', 'Kittys Coffee']
   end 
   
-  def get_user_shop
+  def list_shop
     puts 'Choose a shop you would like more info about.'
     @shops.each.with_index(1) do |shop, index| 
       puts "#{index}. #{shop.name}"
