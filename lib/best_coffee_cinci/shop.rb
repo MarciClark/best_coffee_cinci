@@ -17,4 +17,7 @@ class Shop
     @@all << self
   end
   
+  def get_shops
+  end 
+  
 end 
