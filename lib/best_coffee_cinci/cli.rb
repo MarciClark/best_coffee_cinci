@@ -45,11 +45,8 @@ class BestCoffeeCinci::CLI
   end 
   
   def get_shop_info
-  end 
-  
-  def shop_info 
     puts shop.name
-    shop.the_info.each {|i| puts "- #{i}"}
+    shop.shop_info.each {|i| puts "- #{i}"}
   end 
   
   def show_more
