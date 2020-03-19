@@ -32,6 +32,7 @@ class BestCoffeeCinci::CLI
   def valid_input(input, data)
     input.to_i <= data.length && input.to_i > 0
   end 
+  #V2, 1:00
   
   def show_shop_info(user_shop)
     shop = @shops[user_shop - 1]
