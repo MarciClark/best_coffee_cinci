@@ -36,7 +36,7 @@ class BestCoffeeCinci::CLI
   
   def show_shop_address(user_shop)
     shop = @shops[user_shop - 1]
-    shop.get_shop_address
+    shop.shop_address
     puts "Here is the address for #{shop.name}"
     shop.shop_address.each.with_index(1) do |shop_address, index|
       puts "#{index}. #{shop_address.name}"
