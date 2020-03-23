@@ -18,7 +18,7 @@ class BestCoffeeCinci::CLI
   end 
   
   def list_shop
-    puts 'Choose a shop you would like more info about.'
+    puts 'Choose a shop to get its address.'
     @shops.each.with_index(1) do |shop, index| 
       puts "#{index}. #{shop}"
     end
@@ -26,7 +26,7 @@ class BestCoffeeCinci::CLI
   
   def get_user_input
     user_shop = gets.strip.to_i
-    show_shop_info(user_shop) if valid_input(user_shop, @shops)
+    show_shop_address(user_shop) if valid_input(user_shop, @shops)
   end 
   
   def valid_input(input, data)
@@ -34,17 +34,17 @@ class BestCoffeeCinci::CLI
   end 
   #V2, 1:00
   
-  def show_shop_info(user_shop)
+  def show_shop_address(user_shop)
     shop = @shops[user_shop - 1]
-    shop.get_shop_info
-    puts "Here is the info for #{shop.name}"
-    shop.shop_info.each.with_index(1) do |shop_info, idex|
+    shop.get_shop_address
+    puts "Here is the address for #{shop.name}"
+    shop.shop_info.each.with_index(1) do |shop_address, idex|
       puts "#{idex}. #{shop_info.name}"
     end
     get_user_input(shop)
   end 
   
-  def get_shop_info
+  def get_shop_address
     puts shop.name
     shop.shop_info.each {|i| puts "- #{i}"}
   end 
@@ -60,3 +60,8 @@ class BestCoffeeCinci::CLI
 
   
 end
+
+
+  # show_shop_info = show_shop_address
+  # get_shop_info = get_shop_address
+  # shop_info = shop_address
