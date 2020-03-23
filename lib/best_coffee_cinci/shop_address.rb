@@ -10,6 +10,9 @@ class Shop_address
     save
   end 
   
+  def self.all 
+  end 
+  
   def shop_address
     Scraper.scrape_address(self) if @shops.empty?
   end
