@@ -7,7 +7,7 @@ class BestCoffeeCinci::CLI
       get_shops 
       list_shop
       get_user_input
-      get_shop_info
+      get_shop_address
       show_more
     end 
     goodbye
@@ -46,7 +46,7 @@ class BestCoffeeCinci::CLI
   
   def get_shop_address
     puts shop.name
-    shop.shop_info.each {|i| puts "- #{i}"}
+    shop.shop_address.each {|i| puts "- #{i}"}
   end 
   
   def show_more
