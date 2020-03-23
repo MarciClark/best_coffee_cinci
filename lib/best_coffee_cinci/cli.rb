@@ -38,8 +38,8 @@ class BestCoffeeCinci::CLI
     shop = @shops[user_shop - 1]
     shop.get_shop_address
     puts "Here is the address for #{shop.name}"
-    shop.shop_info.each.with_index(1) do |shop_address, index|
-      puts "#{idex}. #{shop_info.name}"
+    shop.shop_address.each.with_index(1) do |shop_address, index|
+      puts "#{index}. #{shop_address.name}"
     end
     get_user_input(shop)
   end 
