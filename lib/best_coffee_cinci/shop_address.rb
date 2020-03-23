@@ -17,4 +17,9 @@ class Shop_address
     Scraper.scrape_address(self) if @shops.empty?
   end
   
+  
+  def save
+    @all << self 
+  end 
+  
 end 
