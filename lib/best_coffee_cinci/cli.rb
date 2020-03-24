@@ -1,24 +1,16 @@
 class BestCoffeeCinci::CLI 
   
   def call
-    puts "Need a jolt?  Here are Cincinnati's best coffee shops!"
-    @input = ""
-    until @input == "exit"
-      get_shops 
       list_shop
       get_user_input
       get_shop_address
       show_more
-    end 
-    goodbye
-  end 
-  
-  def get_shops
-    @shops = ['Coffee Emporium', '1215 Wine Bar and Coffee Lab', 'Coffee Emporium 2', 'Urbana Coffee', 'Collective Espresso', 'Deeper Roots Coffee', 'Sidewinder Coffee + Tea', 'BLOC Coffee Company', 'Luckman Coffee Company', 'Collective Espresso 2', 'Deeper Roots 2', 'Highland Coffee House', 'Rohs Street Coffee', 'Starbucks', 'Kittys Coffee']
+      goodbye
   end 
   
   def list_shop
-    puts 'Choose a shop to get its address.'
+    puts "Need a jolt?  Here are Cincinnati's best coffee shops!"
+    @shops = ['Coffee Emporium', '1215 Wine Bar and Coffee Lab', 'Coffee Emporium 2', 'Urbana Coffee', 'Collective Espresso', 'Deeper Roots Coffee', 'Sidewinder Coffee + Tea', 'BLOC Coffee Company', 'Luckman Coffee Company', 'Collective Espresso 2', 'Deeper Roots 2', 'Highland Coffee House', 'Rohs Street Coffee', 'Starbucks', 'Kittys Coffee']
     @shops.each.with_index(1) do |shop, index| 
       puts "#{index}. #{shop}"
     end
