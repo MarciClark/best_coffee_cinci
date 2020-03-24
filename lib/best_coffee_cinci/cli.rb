@@ -17,8 +17,20 @@ class BestCoffeeCinci::CLI
   end 
   
   def get_user_input
-    user_shop = gets.strip.to_i
-    show_shop_address(user_shop) if valid_input(user_shop, @shops)
+    input = nil 
+    while input != "exit"
+      puts "Which shop would you like to go to?"
+      input = gets.strip.downcase 
+      
+      if input.to_i > 0 
+        shops = @shops[input.to_i-1]
+        puts "#{shop.address}"
+      elseif input == "shops"
+        list_shops
+      else 
+        puts "I'm sorry, I do not recognize your response"
+      end 
+    end 
   end 
   
   def valid_input(input, data)
