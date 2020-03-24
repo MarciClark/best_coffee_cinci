@@ -1,5 +1,12 @@
 class BestCoffeeCinci::CLI 
   
+  @@muted="\e[1;31m"
+  @@grn="\e[1;32m"
+  @@blu="\e[1;34m"
+  @@mag="\e[1;35m"
+  @@cyn="\e[1;36m"
+  @@white="\e[0m"
+  
   def call
       list_shop
       get_user_input
@@ -9,7 +16,7 @@ class BestCoffeeCinci::CLI
   end 
   
   def list_shop
-    puts "Need a jolt?  Here are Cincinnati's best coffee shops!"
+    puts "\n#{@@blu}Need a jolt?  Here are Cincinnati's best coffee shops!#{@@white}\n"
     @shops = ['Coffee Emporium', '1215 Wine Bar and Coffee Lab', 'Coffee Emporium 2', 'Urbana Coffee', 'Collective Espresso', 'Deeper Roots Coffee', 'Sidewinder Coffee + Tea', 'BLOC Coffee Company', 'Luckman Coffee Company', 'Collective Espresso 2', 'Deeper Roots 2', 'Highland Coffee House', 'Rohs Street Coffee', 'Starbucks', 'Kittys Coffee']
     @shops.each.with_index(1) do |shop, index| 
       puts "#{index}. #{shop}"
@@ -19,7 +26,7 @@ class BestCoffeeCinci::CLI
   def get_user_input
     input = nil 
     while input != "exit"
-      puts "Which shop would you like to go to?"
+      puts "\n#{@@grn}Which shop would you like to go to?\n#{@@white}"
       input = gets.strip.downcase 
       
       if input.to_i > 0 
