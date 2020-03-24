@@ -33,31 +33,6 @@ class BestCoffeeCinci::CLI
     end 
   end 
   
-  def valid_input(input, data)
-    input.to_i <= data.length && input.to_i > 0
-  end 
-  #V2, 1:00
-  
-  def show_shop_address(user_shop)
-    shop = @shops[user_shop - 1]
-    shop.shop_address
-    puts "Here is the address for #{shop.name}"
-    shop.shop_address.each.with_index(1) do |shop_address, index|
-      puts "#{index}. #{shop_address.name}"
-    end
-    get_user_input(shop)
-  end 
-  
-  def get_shop_address
-    puts shop.name
-    shop.shop_address.each {|i| puts "- #{i}"}
-  end 
-  
-  def show_more
-    puts "Ready to grab some coffee? Type 'exit' to exit or press any key to see more shops."
-    @input = gets.strip
-  end 
-  
   def goodbye
     puts "Have a brew-tiful day!"
   end 
