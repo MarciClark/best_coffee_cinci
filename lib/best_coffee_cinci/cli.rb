@@ -3,7 +3,7 @@ class BestCoffeeCinci::CLI
   def call
       list_shop
       get_user_input
-      get_shop_address
+      shop_address
       show_more
       goodbye
   end 
