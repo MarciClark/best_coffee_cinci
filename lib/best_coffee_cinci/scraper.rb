@@ -1,11 +1,10 @@
-class Scraper
+class BestCoffeeCinci::Scraper
+# class Scraper
   
   # def self.scrape_shops 
   #   doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops"))
     
   #   shops = doc.css("")
-  
-  class NYT_Bestsellers::Bestsellers 
   
   attr_accessor :address, :phone, :url
   
