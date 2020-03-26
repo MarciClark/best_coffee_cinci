@@ -9,7 +9,7 @@ class BestCoffeeCinci::Scraper
   attr_accessor :address, :phone, :url
   
   def self.all_shops
-    self.scrape_shops
+    doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops"))
   end 
   
   def self.scrape_shops
