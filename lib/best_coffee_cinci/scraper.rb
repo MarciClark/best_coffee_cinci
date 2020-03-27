@@ -6,35 +6,30 @@ class BestCoffeeCinci::Scraper
     
   #   shops = doc.css("")
   
-  attr_accessor :address, :phone, :url
+  # attr_accessor :address, :phone, :url
   
   def self.all_shops
     doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops"))
-  end 
-  
-  def self.scrape_shops
-    shops = []
-    
-    shops << self.scrape_address
-    shops << self.scrape_phone
+ 
+    shops = doc.css("p.venueName")
   end 
   
   def self.scrape_address
-    doc = Nokogiri::HTML(open("https://www.barnesandnoble.com/b/the-new-york-times-bestsellers-hardcover-fiction/_/N-1p3r"))
+    doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops"))
     
     address = self.new 
-    shop_address = doc.css("div.product-shelf-title.pr-m").text.gsub(/\t/, "")
+    shop_address = doc.css("").text.gsub(/\t/, "")
     
     address
   end 
   
-  def self.scrape_phone
-    doc = Nokogiri::HTML(open("https://www.barnesandnoble.com/b/the-new-york-times-bestsellers-hardcover-fiction/_/N-1p3r"))
+  # def self.scrape_phone
+  #   doc = Nokogiri::HTML(open("https://www.barnesandnoble.com/b/the-new-york-times-bestsellers-hardcover-fiction/_/N-1p3r"))
     
-    phone = self.new 
-    shop_phone = doc.css("div.product-shelf-title.pr-m").text.gsub(/\t/, "")
+  #   phone = self.new 
+  #   shop_phone = doc.css("div.product-shelf-title.pr-m").text.gsub(/\t/, "")
     
-    phone
+  #   phone
   end 
   
 end
