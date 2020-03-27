@@ -8,12 +8,12 @@ class BestCoffeeCinci::CLI
   @@white="\e[0m"
   
   def call
-      list_shop
+      list_shops
       get_user_input
       goodbye
   end 
   
-  def list_shop
+  def list_shops
     puts "\n#{@@blu}Need a jolt?  Here are Cincinnati's best coffee shops!#{@@white}\n"
     @shops = ['Coffee Emporium', '1215 Wine Bar and Coffee Lab', 'Coffee Emporium 2', 'Urbana Coffee', 'Collective Espresso', 'Deeper Roots Coffee', 'Sidewinder Coffee + Tea', 'BLOC Coffee Company', 'Luckman Coffee Company', 'Collective Espresso 2', 'Deeper Roots 2', 'Highland Coffee House', 'Rohs Street Coffee', 'Starbucks', 'Kittys Coffee']
     @shops.each.with_index(1) do |shop, index| 
@@ -30,6 +30,7 @@ class BestCoffeeCinci::CLI
       if input.to_i > 0 
         shops = @shops[input.to_i-1]
         puts "#{@address}"
+        #puts "#{@shop.address}"
       elsif input == "shops"
         list_shops
       else 
