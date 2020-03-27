@@ -10,7 +10,6 @@ class BestCoffeeCinci::CLI
   def call
       list_shop
       get_user_input
-      show_more
       goodbye
   end 
   
