@@ -30,7 +30,7 @@ class BestCoffeeCinci::CLI
       if input.to_i > 0 
         shops = @shops[input.to_i-1]
         puts "#{@address}"
-      elseif input == "shops"
+      elsif input == "shops"
         list_shops
       else 
         puts "I'm sorry, I do not recognize your response"
