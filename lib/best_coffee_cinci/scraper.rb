@@ -18,7 +18,7 @@ class BestCoffeeCinci::Scraper
     doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops"))
     
     address = self.new 
-    shop_address = doc.css("").text.gsub(/\t/, "")
+    shop_address = doc.css("span.address").text.gsub(/\t/, "")
     
     address
   end 
