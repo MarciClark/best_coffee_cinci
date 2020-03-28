@@ -1,15 +1,16 @@
 class Shop
   
-  attr_accessor :name, :shops
+  attr_accessor :name, :address
   
   @@all = []
   
   def initialize(name)
     @name = name 
-    @shops = []
+    @address = []
   end 
   
   def self.all 
+    BestCoffeeCinci::Scraper if @@all.empty?
     @@all 
   end 
   
@@ -17,7 +18,8 @@ class Shop
     @@all << self
   end
   
-  def get_shops
+  def get_address 
+    BestCoffeeCinci::Scraper_address(self) if @address.empty?
   end 
   
 end 
