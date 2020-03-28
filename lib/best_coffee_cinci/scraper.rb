@@ -30,6 +30,5 @@ class BestCoffeeCinci::Scraper
   #   shop_phone = doc.css("div.product-shelf-title.pr-m").text.gsub(/\t/, "")
     
   #   phone
-  end 
   
 end
