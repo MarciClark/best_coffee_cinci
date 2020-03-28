@@ -10,7 +10,7 @@ class Shop
   end 
   
   def self.all 
-    BestCoffeeCinci::Scraper if @@all.empty?
+    BestCoffeeCinci::Scraper.scrape_shops if @@all.empty?
     @@all 
   end 
   
