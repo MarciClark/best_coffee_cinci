@@ -13,9 +13,17 @@ class BestCoffeeCinci::CLI
       goodbye
   end 
   
+  # def list_shops
+  #   puts "\n#{@@blu}Need a jolt?  Here are Cincinnati's best coffee shops!#{@@white}\n"
+  #   @shops = ['Coffee Emporium', '1215 Wine Bar and Coffee Lab', 'Coffee Emporium 2', 'Urbana Coffee', 'Collective Espresso', 'Deeper Roots Coffee', 'Sidewinder Coffee + Tea', 'BLOC Coffee Company', 'Luckman Coffee Company', 'Collective Espresso 2', 'Deeper Roots 2', 'Highland Coffee House', 'Rohs Street Coffee', 'Starbucks', 'Kittys Coffee']
+  #   @shops.each.with_index(1) do |shop, index| 
+  #     puts "#{index}. #{shop}"
+  #   end
+  # end 
+  
   def list_shops
     puts "\n#{@@blu}Need a jolt?  Here are Cincinnati's best coffee shops!#{@@white}\n"
-    @shops = ['Coffee Emporium', '1215 Wine Bar and Coffee Lab', 'Coffee Emporium 2', 'Urbana Coffee', 'Collective Espresso', 'Deeper Roots Coffee', 'Sidewinder Coffee + Tea', 'BLOC Coffee Company', 'Luckman Coffee Company', 'Collective Espresso 2', 'Deeper Roots 2', 'Highland Coffee House', 'Rohs Street Coffee', 'Starbucks', 'Kittys Coffee']
+    @shops = BestCoffeeCinci::Scraper 
     @shops.each.with_index(1) do |shop, index| 
       puts "#{index}. #{shop}"
     end
