@@ -8,9 +8,9 @@ class BestCoffeeCinci::CLI
   @@white="\e[0m"
   
   def call
-      list_shops
-      get_user_input
-      goodbye
+    list_shops
+    get_user_input
+    goodbye
   end 
   
   # def list_shops
@@ -23,7 +23,7 @@ class BestCoffeeCinci::CLI
   
   def list_shops
     puts "\n#{@@blu}Need a jolt?  Here are Cincinnati's best coffee shops!#{@@white}\n"
-    @shops = BestCoffeeCinci::Scraper 
+    @shops = BestCoffeeCinci::Scraper.all
     @shops.each.with_index(1) do |shop, index| 
       puts "#{index}. #{shop}"
     end

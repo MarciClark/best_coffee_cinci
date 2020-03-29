@@ -1,4 +1,6 @@
 class BestCoffeeCinci::Scraper
+  
+  attr_accessor :shop, :address, :url
 # class Scraper
   
   # def self.scrape_shops 
