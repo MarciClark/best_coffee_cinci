@@ -1,14 +1,7 @@
 class BestCoffeeCinci::Scraper
   
   attr_accessor :shop, :address, :url
-# class Scraper
   
-  # def self.scrape_shops 
-  #   doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops"))
-    
-  #   shops = doc.css("")
-  
-  # attr_accessor :address, :phone, :url
   
   def self.all_shops
     doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops"))
@@ -17,7 +10,7 @@ class BestCoffeeCinci::Scraper
   end 
   
   def self.scrape_address
-    doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops"))
+    doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops", 'User-Agent' => 'ruby'))
     
     address = self.new 
     shop_address = doc.css("span.address").text.gsub(/\t/, "")
@@ -26,10 +19,10 @@ class BestCoffeeCinci::Scraper
   end 
   
   # def self.scrape_phone
-  #   doc = Nokogiri::HTML(open("https://www.barnesandnoble.com/b/the-new-york-times-bestsellers-hardcover-fiction/_/N-1p3r"))
+  #   doc = Nokogiri::HTML(open(""))
     
   #   phone = self.new 
-  #   shop_phone = doc.css("div.product-shelf-title.pr-m").text.gsub(/\t/, "")
+  #   shop_phone = doc.css("").text.gsub(/\t/, "")
     
   #   phone
   
