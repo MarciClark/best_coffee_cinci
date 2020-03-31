@@ -4,10 +4,9 @@ require_relative "./best_coffee_cinci/scraper"
 require_relative "./best_coffee_cinci/address"
 # require_relative "./best_coffee_cinci/number"
 
-
-require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'pry'
 
 module EdenEvents
   class Error < StandardError; end
