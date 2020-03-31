@@ -18,12 +18,4 @@ class BestCoffeeCinci::Scraper
     address
   end 
   
-  # def self.scrape_phone
-  #   doc = Nokogiri::HTML(open(""))
-    
-  #   phone = self.new 
-  #   shop_phone = doc.css("").text.gsub(/\t/, "")
-    
-  #   phone
-  
 end
