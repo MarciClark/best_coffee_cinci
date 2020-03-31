@@ -4,19 +4,19 @@ class BestCoffeeCinci::Scraper
   
   
   def self.all_shops
-    doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops"))
+    doc = Nokogiri::HTML(open("https://club.atlascoffeeclub.com/cincinnati-coffee-shops-7-must-try/"))
  
-    shops = doc.css("p.venueName")
+    shops = doc.css("h2.text.align.center")
   end 
   
-  def self.scrape_address
-    doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops", 'User-Agent' => 'ruby'))
+  # def self.scrape_address
+  #   doc = Nokogiri::HTML(open("https://club.atlascoffeeclub.com/cincinnati-coffee-shops-7-must-try/"))
     
-    address = self.new 
-    shop_address = doc.css("span.address").text.gsub(/\t/, "")
+  #   address = self.new 
+  #   shop_address = doc.css("br").text.gsub(/\t/, "")
     
-    address
-  end 
+  #   address
+  # end 
   
   # def self.scrape_phone
   #   doc = Nokogiri::HTML(open(""))
