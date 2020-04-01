@@ -19,17 +19,17 @@ class BestCoffeeCinci::Scraper
   # end 
   
   def self.all_shops
-    doc = Nokogiri::HTML(open("https://cincinnatiusa.com/article/9-hot-coffee-shops"))
+    doc = Nokogiri::HTML(open("https://club.atlascoffeeclub.com/cincinnati-coffee-shops-7-must-try/"))
  
-    shop = doc.css(".student-card").first
+    shop = doc.css("h2.text-align:center").first
     href = student_card.css("a").first["href"]
   end 
   
   def self.scrape_address
-    doc = Nokogiri::HTML(open("https://foursquare.com/top-places/cincinnati/best-coffee-shops"))
+    doc = Nokogiri::HTML(open("https://club.atlascoffeeclub.com/cincinnati-coffee-shops-7-must-try/"))
     
     address = self.new 
-    shop_address = doc.css("div.address").text.gsub(/\t/, "")
+    shop_address = doc.css("br").text.gsub(/\t/, "")
     
     address
   end 
