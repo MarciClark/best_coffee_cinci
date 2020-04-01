@@ -19,7 +19,7 @@ class Shop
   end
   
   def get_address 
-    BestCoffeeCinci::Scraper_address(self) if @address.empty?
+    BestCoffeeCinci::Scraper.scrape_address(self) if @address.empty?
   end 
   
 end 

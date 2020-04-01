@@ -22,7 +22,7 @@ class BestCoffeeCinci::Scraper
     doc = Nokogiri::HTML(open("https://club.atlascoffeeclub.com/cincinnati-coffee-shops-7-must-try/"))
  
     shop = doc.css("h2.text-align:center").first
-    href = student_card.css("a").first["href"]
+    # href = shop.css("a").first["href"]
   end 
   
   def self.scrape_address
