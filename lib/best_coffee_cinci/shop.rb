@@ -14,12 +14,12 @@ class Shop
     @@all 
   end 
   
-  def save
-    @@all << self
-  end
-  
   def get_address 
     BestCoffeeCinci::Scraper.scrape_address(self) if @address.empty?
   end 
+  
+  def save
+    @@all << self
+  end
   
 end 
