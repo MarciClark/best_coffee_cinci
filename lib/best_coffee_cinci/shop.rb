@@ -1,4 +1,4 @@
-class Shop
+class BestCoffeeCinci::Shop
   
   attr_accessor :name, :address
   
