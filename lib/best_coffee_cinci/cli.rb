@@ -27,7 +27,6 @@ class BestCoffeeCinci::CLI
     @shops = BestCoffeeCinci::Scraper.all_shops
     @shops.each.with_index(1) do |shop, index| 
       puts "#{index}. #{shop}"
-      binding.pry 
     end
   end 
   
