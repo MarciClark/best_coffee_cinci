@@ -33,6 +33,7 @@ class BestCoffeeCinci::Scraper
     
     doc = Nokogiri::HTML(open(url))
     name = doc.search("").text
+    address = doc.search("").text 
   end 
   
 end 
