@@ -17,15 +17,22 @@ class BestCoffeeCinci::Scraper
   #   address
   # end 
   
-  def self.all_shops
-    doc = Nokogiri::HTML(open("http://kematis.com/coffee-near-me/coffee-shops-in-cincinnati-ohio/"))
-    shops = doc.css("td#align") 
+  # def self.all_shops
+  #   doc = Nokogiri::HTML(open("http://kematis.com/coffee-near-me/coffee-shops-in-cincinnati-ohio/"))
+  #   shops = doc.css("td#align") 
     
-    shops.each do |s|
-    name = s.text
-    ref = s.attr("value")
-    BestCoffeeCinci::Shop.new(name, ref)
-    end 
+  #   shops.each do |s|
+  #   name = s.text
+  #   ref = s.attr("value")
+  #   BestCoffeeCinci::Shop.new(name, ref)
+  #   end 
+  # end 
+  
+  def self.all_shops(url)
+    shops = shop.new 
+    
+    doc = Nokogiri::HTML(open(url))
+    name = doc.search("").text
   end 
   
 end 
