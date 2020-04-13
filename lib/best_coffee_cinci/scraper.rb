@@ -23,7 +23,7 @@ class BestCoffeeCinci::Scraper
     
     shops.each do |s|
     name = s.text
-    ref = m.attr("value")
+    ref = s.attr("value")
     BestCoffeeCinci::Shop.new(name, ref)
     end 
   end 
