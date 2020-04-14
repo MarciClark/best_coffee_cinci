@@ -30,11 +30,11 @@ class BestCoffeeCinci::Scraper
   # end 
   
   def self.scrape_shops
-    shop = shop.new 
-    
     doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
-    name = doc.search("div.component title").text
-    address = doc.search("div.component text").text 
+    name = doc.css("div.component title").text
+    address = doc.css("div.component text").text 
+    
+    BestCoffeeCinci::Shop.new(name)
   end 
   
 end 
