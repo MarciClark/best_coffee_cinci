@@ -2,21 +2,21 @@ class BestCoffeeCinci::Scraper
   
   # attr_accessor :shop, :address, :url
   
-  # def self.scrape_shops
-  #   doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
+  def self.scrape_shops
+    doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
  
-  #   shop = doc.css("div.component title").text.gsub(/\t/, "")
-  #   BestCoffeeCinci::Shop.new(name)
-  # end 
+    shop = doc.css("div.component title").text.gsub(/\t/, "")
+    BestCoffeeCinci::Shop.new(name)
+  end 
   
-  # def self.scrape_address
-  #   doc = Nokogiri::HTML(open("https://twodrifters.us/blog/best-coffee-shops-in-cincinnati-ohio.html"))
+  def self.scrape_address
+    doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
     
-  #   address = self.new 
-  #   shop_address = doc.css("div.arconix-box.arconix-box-gray").text.gsub(/\t/, "")
+    address = self.new 
+    shop_address = doc.css("div.component text").text.gsub(/\t/, "")
     
-  #   address
-  # end 
+    address
+  end 
   
   # def self.all_shops
   #   doc = Nokogiri::HTML(open("http://kematis.com/coffee-near-me/coffee-shops-in-cincinnati-ohio/"))
@@ -29,12 +29,12 @@ class BestCoffeeCinci::Scraper
   #   end 
   # end 
   
-  def self.scrape_shops
-    doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
-    name = doc.css("div.component title").text
-    address = doc.css("div.component text").text 
+  # def self.scrape_shops
+  #   doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
+  #   name = doc.css("div.component title").text
+  #   address = doc.css("div.component text").text 
     
-    BestCoffeeCinci::Shop.new(name)
-  end 
+  #   BestCoffeeCinci::Shop.new(name)
+  # end 
   
 end 
