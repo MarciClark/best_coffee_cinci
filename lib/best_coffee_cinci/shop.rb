@@ -6,7 +6,7 @@ class BestCoffeeCinci::Shop
   
   def initialize(name)
     @name = name 
-    @address = []
+    @addresses = []
     save
   end 
   
