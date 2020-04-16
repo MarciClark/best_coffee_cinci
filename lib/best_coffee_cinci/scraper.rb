@@ -5,22 +5,14 @@ class BestCoffeeCinci::Scraper
   def self.scrape_shops
     doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
  
-    shops = doc.css(".component-title").text
+    shops = doc.css(".component.title").drop(2).each do |shop|
+    name = shop.css(":first-child").text
     BestCoffeeCinci::Shop.new(name)
-    
-    shops.each do |shop|
-      puts shop.text.strip
     end 
+  binding.pry
   end 
   
-  # def self.scrape_address
-  #   doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
-    
-  #   address = self.new 
-  #   shop_address = doc.css(".component-text").text.gsub(/\t/, "")
-    
-  #   address
-  # end 
+
   
   
   
