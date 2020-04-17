@@ -23,7 +23,7 @@ class BestCoffeeCinci::CLI
   # end 
   
   def list_shops
-    puts "\n#{@@blu}Need a jolt?  Here are Cincinnati's best coffee shops!#{@@white}\n"
+    puts "\n#{@@blu}Need a jolt?  Here are UC's coffee shops!#{@@white}\n"
     @shops = BestCoffeeCinci::Scraper.scrape_shops
     @shops.each.with_index(1) do |shop, index| 
       puts "#{index}. #{shop}"
