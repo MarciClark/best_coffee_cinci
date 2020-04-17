@@ -14,12 +14,10 @@ class Address
   end 
   
   def address
-    Scraper.scrape_address(self) if @shops.empty?
+    Scraper.scrape_addresses(self) if @shops.empty?
   end
-  
   
   def save
     @all << self 
   end 
-  
 end 
