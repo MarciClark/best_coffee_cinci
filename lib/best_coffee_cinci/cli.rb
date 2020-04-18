@@ -33,7 +33,7 @@ class BestCoffeeCinci::CLI
   def get_user_input
     input = nil 
     while input != "exit"
-      puts "\n#{@@grn}Which shop would you like to go to?\n#{@@white}"
+      puts "\n#{@@grn}Please pick the number of the shop you would like more info on.\n#{@@white}"
       input = gets.strip.downcase 
       
       if input.to_i > 0 
