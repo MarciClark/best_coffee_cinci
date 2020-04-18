@@ -38,6 +38,7 @@ class BestCoffeeCinci::CLI
       
       if input.to_i > 0 
         shops = @shops[input.to_i-1]
+        puts "Shop Name: #{@shop}"
         puts "Location: #{@address}"
         puts "Hours: #{@hours}"
       elsif input == "shops"
@@ -51,11 +52,4 @@ class BestCoffeeCinci::CLI
   def goodbye
     puts "Have a brew-tiful day!"
   end 
-
-  
 end
-
-
-  # show_shop_info = show_shop_address
-  # get_shop_info = get_shop_address
-  # shop_info = shop_address
