@@ -33,7 +33,7 @@ class BestCoffeeCinci::CLI
   def get_user_input
     input = nil 
     while input != "exit"
-      puts "\n#{@@grn}Please pick the number of the shop you would like more info on.\n#{@@white}"
+      puts "\n#{@@grn}Please pick the number of the shop you would like more info on or 'exit' to exit.\n#{@@white}"
       input = gets.strip.downcase 
       
       if input.to_i > 0 
@@ -50,6 +50,6 @@ class BestCoffeeCinci::CLI
   end 
   
   def goodbye
-    puts "Have a brew-tiful day!"
+    puts "\n#{@@mag}Have a brew-tiful day!\n#{@@white}"
   end 
 end
