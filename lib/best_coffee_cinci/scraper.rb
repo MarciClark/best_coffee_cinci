@@ -18,5 +18,3 @@ class BestCoffeeCinci::Scraper
   # end 
   
 end 
-
-# .drop(2).
