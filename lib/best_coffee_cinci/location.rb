@@ -1,4 +1,4 @@
-class Address
+class Location
   
   attr_accessor :name, :shops
   
@@ -13,8 +13,8 @@ class Address
   def self.all 
   end 
   
-  def address
-    Scraper.scrape_addresses(self) if @shops.empty?
+  def location
+    Scraper.locations(self) if @shops.empty?
   end
   
   def save

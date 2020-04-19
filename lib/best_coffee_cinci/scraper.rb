@@ -8,13 +8,13 @@ class BestCoffeeCinci::Scraper
     end 
   end
   
-  # def self.scrape_addresses
-  #   doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
+  def self.scrape_location
+    doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
  
-  #   addresses = doc.css(".component.text").each do |address|
-  #   name = address.css(":first-child").text
-  #   # BestCoffeeCinci::Address.new(name)
-  #   end 
-  # end 
+    locations = doc.css(".component.text h2").each do |location|
+    name = location.css(":first-child").text
+    BestCoffeeCinci::Location.new(name)
+    end 
+  end 
   
 end 

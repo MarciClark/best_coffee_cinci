@@ -39,7 +39,7 @@ class BestCoffeeCinci::CLI
       if input.to_i > 0 
         shops = @shops[input.to_i-1]
         puts "Shop Name: #{@shop}"
-        puts "Location: #{@address}"
+        puts "Location: #{@location}"
         puts "Hours: #{@hours}"
       elsif input == "shops"
         list_shops
