@@ -15,6 +15,16 @@ class BestCoffeeCinci::Scraper
     name = location.css("").text
     BestCoffeeCinci::Location.new
     end 
-  end 
+  end
   
+  def scrape_hours 
+    doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
+    
+    hours = doc.css(".table table-striped").text.strip 
+    table = doc.css("tr")
+    table.each do |table|
+      hours = table.text.strip 
+      shop.hours << info 
+    end 
+  end 
 end 

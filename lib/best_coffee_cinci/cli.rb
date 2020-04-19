@@ -23,7 +23,7 @@ class BestCoffeeCinci::CLI
   # end 
   
   def list_shops
-    puts "\n#{@@blu}Need a jolt?  Here are UC's coffee shops!#{@@white}\n"
+    puts "\n#{@@muted}Need a jolt?  Here are UC's coffee shops!#{@@white}\n"
     @shops = BestCoffeeCinci::Scraper.scrape_shops
     @shops.each.with_index(1) do |shop, index| 
       puts "#{index}. #{shop}"
@@ -38,9 +38,9 @@ class BestCoffeeCinci::CLI
       
       if input.to_i > 0 
         shops = @shops[input.to_i-1]
-        puts "Shop Name: #{@shop}"
-        puts "Location: #{@location}"
-        puts "Hours: #{@hours}"
+        puts "\n#{@@cyn}Shop Name: #{@shop}\n#{@@white}"
+        puts "\n#{@@cyn}Location: #{@location}\n#{@@white}"
+        puts "\n#{@@cyn}Hours: #{@hours}\n#{@@white}"
       elsif input == "shops"
         list_shops
       else 
