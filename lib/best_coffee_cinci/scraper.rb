@@ -1,6 +1,6 @@
 class BestCoffeeCinci::Scraper
   
-   def self.scrape_shops
+  def self.scrape_shops
     doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
     shops = doc.css(".component.title h3").each do |shop|
     name = shop.css(":first-child").text.strip
@@ -12,19 +12,14 @@ class BestCoffeeCinci::Scraper
     doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
  
     locations = doc.css(".component.text br").each do |location|
-    name = location.css("").text
+    name = location.css(":second-child").text
     BestCoffeeCinci::Location.new
     end 
   end
   
-  def scrape_hours 
-    doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
+  # def scrape_hours 
+  #   doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
     
-    hours = doc.css(".table table-striped").text.strip 
-    table = doc.css("tr")
-    table.each do |table|
-      hours = table.text.strip 
-      shop.hours << info 
-    end 
-  end 
+  #   hours = doc.css(".table table-striped").text.strip 
+  # end 
 end 
