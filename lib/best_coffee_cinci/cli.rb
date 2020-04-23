@@ -24,23 +24,21 @@ class BestCoffeeCinci::CLI
   
   def list_shops
     puts "\n#{@@muted}Need a jolt?  Here are UC's coffee shops:#{@@white}\n"
-    @shops = BestCoffeeCinci::Scraper.scrape_shops
+    @shops = BestCoffeeCinci::Shop.all
     @shops.each.with_index(1) do |shop, index| 
-      puts "#{index}. #{shop}"
+      puts "#{index}. #{shop.name}"
     end
   end 
   
   def get_user_input
     input = nil 
     while input != "exit"
-      puts "\n#{@@grn}Please pick the number of the shop you would like more info on or 'exit' to exit.\n#{@@white}"
+      puts "\n#{@@grn}Please pick the number of the shop you would like more info on, 'shops' to go back to the list, or 'exit' to exit.\n#{@@white}"
       input = gets.strip.downcase 
       
       if input.to_i > 0 
         shops = @shops[input.to_i-1]
-        puts "\n#{@@cyn}Shop Name: #{@shop}\n#{@@white}"
-        puts "\n#{@@cyn}Location: #{@location}\n#{@@white}"
-        puts "\n#{@@cyn}Hours: #{@hours}\n#{@@white}"
+        puts "\n#{@@cyn}Location and Phone Number: #{@shop}\n#{@@white}"
       elsif input == "shops"
         list_shops
       else 
