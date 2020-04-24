@@ -42,10 +42,15 @@ class BestCoffeeCinci::CLI
       elsif input == "shops"
         list_shops
       else 
-        puts "I'm sorry, I do not recognize your response"
+        puts "\n#{@@muted}I'm sorry, I do not recognize your response\n#{@@white}"
       end 
     end 
   end 
+
+    def list_locations
+      puts shop.name 
+      location.scrape_location.each {|index| puts "- #{index}"}
+    end 
   
   def goodbye
     puts "\n#{@@mag}Have a brew-tiful day!\n#{@@white}"
