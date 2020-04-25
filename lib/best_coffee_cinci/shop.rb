@@ -1,12 +1,12 @@
 class BestCoffeeCinci::Shop
   
-  attr_accessor :name, :locations
+  attr_accessor :name, :location
   
   @@all = []
   
   def initialize(name)
     @name = name 
-    @locations = []
+    @location = []
     save
   end 
   
