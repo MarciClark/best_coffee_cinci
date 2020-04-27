@@ -20,7 +20,7 @@ class BestCoffeeCinci::Scraper
     doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
     locations = doc.css(".component.text br").text.strip
     locations.each do |location|
-      puts "#{location.name}"
+      puts location.text
     end
   end
 end 
