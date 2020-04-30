@@ -15,14 +15,6 @@ class BestCoffeeCinci::CLI
     goodbye
   end 
   
-  # def list_shops
-  #   puts "\n#{@@blu}Need a jolt?  Here are Cincinnati's best coffee shops!#{@@white}\n"
-  #   @shops = ['Campus Green Cafe', 'Campus View Cafe']
-  #   @shops.each.with_index(1) do |shop, index| 
-  #     puts "#{index}. #{shop}"
-  #   end
-  # end 
-  
   def list_shops
     puts "\n#{@@muted}Need a jolt?  Here are UC's coffee shops:#{@@white}\n"
     @shops = BestCoffeeCinci::Shop.all

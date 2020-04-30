@@ -9,12 +9,12 @@ class BestCoffeeCinci::Scraper
   end
 
   def self.scrape_locations
-    doc = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
-    locations = doc.css(".component.text br").text.strip.split
-    #added .split to turn string into an array
-    binding.pry
-    locations.each do |location|
-      puts location.text
-    end
+    shop_location = Nokogiri::HTML(open("https://www.uc.edu/campus-life/food/locations-hours/cafes.html"))
+    info = shop_location.css(".component.text")
+    info.css("br").text.strip.split
+    info.each do |info|
+      # binding.pry
+    end 
   end
+
 end 
