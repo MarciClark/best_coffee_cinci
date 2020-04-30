@@ -12,7 +12,6 @@ class BestCoffeeCinci::CLI
     list_shops
     get_user_input
     list_locations
-    goodbye
   end 
   
   def list_shops
@@ -26,7 +25,7 @@ class BestCoffeeCinci::CLI
   def get_user_input
     input = nil 
     while input != "exit"
-      puts "\n#{@@grn}Please pick the number of the shop you would like more info on, 'shops' to go back to the list, or 'exit' to exit.\n#{@@white}"
+      puts "\n#{@@grn}Please pick the number of the shop you would like more info on, 'shops' to go back to the list.\n#{@@white}"
       input = gets.strip.downcase 
       
       if input.to_i > 0 
@@ -34,6 +33,8 @@ class BestCoffeeCinci::CLI
         puts "\n#{@@cyn}Location and Phone Number#{@location}\n#{@@white}"
       elsif input == "shops"
         list_shops
+      elsif input == "exit"
+        goodbye
       else 
         puts "\n#{@@muted}I'm sorry, I do not recognize your response\n#{@@white}"
       end 
