@@ -11,7 +11,7 @@ class BestCoffeeCinci::CLI
   def call
     list_shops
     get_user_input
-    list_locations
+    list_info
   end 
   
   def list_shops
@@ -30,7 +30,7 @@ class BestCoffeeCinci::CLI
       
       if input.to_i > 0 
         shops = @shops[input.to_i-1]
-        puts "\n#{@@cyn}Location and Phone Number#{@location}\n#{@@white}"
+        puts "\n#{@@cyn}Location and Phone Number#{@info}\n#{@@white}"
       elsif input == "shops"
         list_shops
       elsif input == "exit"
@@ -41,9 +41,9 @@ class BestCoffeeCinci::CLI
     end 
   end 
 
-  def list_locations
-    BestCoffeeCinci::Scraper.scrape_locations
-    puts @location
+  def list_info
+    BestCoffeeCinci::Scraper.scrape_info
+    puts @info
   end
   
   def goodbye
