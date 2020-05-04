@@ -15,10 +15,10 @@ class BestCoffeeCinci::CLI
   end 
   
   def list_shops
-    puts "\n#{@@muted}Need a jolt?  Here are UC's coffee shops:#{@@white}\n"
+    puts "\n#{@@muted}Need a jolt?  Here are Cincinnati's Top 9 Coffee Shops:#{@@white}\n"
     @shops = BestCoffeeCinci::Shop.all
-    @shops.each.with_index(1) do |shop, index| 
-      puts "#{index}. #{shop.name}"
+    @shops.each do |shop, index| 
+      puts "#{shop.name}"
     end
   end 
   
