@@ -27,10 +27,32 @@ class BestCoffeeCinci::Scraper
 
   def self.scrape_info
     doc = Nokogiri::HTML(open("https://cincinnatiusa.com/article/9-hot-coffee-shops"))
-    info = doc.css(".font-size")
+    info = doc.css(".article-body span").each do |info|
     info.css("p").text.split
-    info.each do |info|
-    end 
-    info.text
+
+    shop_info = []
+
+    shop_info << info
   end
+    puts shop_info
+  end
+
+
+  # def self.scrape_shops
+  #   doc = Nokogiri::HTML(open("https://club.atlascoffeeclub.com/cincinnati-coffee-shops-7-must-try/"))
+  #   shops = doc.css(".a href strong").each do |shop|
+  #   name = shop.text.strip
+  #   BestCoffeeCinci::Shop.new(name)
+  #   end 
+  # end
+
+  # def self.scrape_info
+  #   doc = Nokogiri::HTML(open("https://club.atlascoffeeclub.com/cincinnati-coffee-shops-7-must-try/"))
+  #   info = doc.css(".br strong").each do |info|
+  #     binding.pry
+  #   info.css("p").text.split
+  #   end 
+  #   info
+  # end
+
 end 

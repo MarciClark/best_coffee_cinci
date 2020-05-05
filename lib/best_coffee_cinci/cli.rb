@@ -43,7 +43,7 @@ class BestCoffeeCinci::CLI
 
   def list_info
     BestCoffeeCinci::Scraper.scrape_info
-    puts @info
+    puts @shop_info
   end
   
   def goodbye
