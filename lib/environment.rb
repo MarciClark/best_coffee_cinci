@@ -6,8 +6,9 @@ require_relative "./best_coffee_cinci/shop"
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
+require 'colorize'
 
-module EdenEvents
+module BestCoffeeCinci
   class Error < StandardError; end
   # Your code goes here...
 end
