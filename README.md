@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To run the program, type `./bin/BestCoffeeCinci` in your terminal.
 
 ## Development
 
