@@ -1,13 +1,13 @@
 class BestCoffeeCinci::Shop
   
-  attr_accessor :name, :info
+  attr_accessor :name, :info, :hours, :description, :link, :address
   
   @@all = []
   
-  def initialize(name)
+  def initialize(name, link)
     @name = name 
-    @info = info
-    save
+    @link = link
+    @@all << self
   end 
   
   def self.all 
@@ -18,9 +18,4 @@ class BestCoffeeCinci::Shop
   def get_info
     BestCoffeeCinci::Scraper.scrape_info if @info.empty?
   end 
-  
-  def save
-    @@all << self
-  end
-  
 end 
