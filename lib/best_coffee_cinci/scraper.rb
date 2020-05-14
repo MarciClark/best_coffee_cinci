@@ -15,7 +15,7 @@ class BestCoffeeCinci::Scraper
     doc = Nokogiri::HTML(open(shop.link))
     shop.address = doc.css(".address").text
     shop.hours = doc.css(".hours").text
-    shop.description = doc.css(".full-description").text
+    shop.description = doc.css(".full-description").text.gsub("Show more", "")
     end
 
   end

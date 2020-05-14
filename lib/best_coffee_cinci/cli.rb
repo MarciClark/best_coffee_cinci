@@ -15,7 +15,7 @@ class BestCoffeeCinci::CLI
   end 
 
   def list_info(shop)
-      puts "Great choice!  Here's the info for:".colorize(:green) + ""
+      puts "Great choice!  Here's the info for:".colorize(:green) + "#{shop.name}"
       puts "Description:".colorize(:blue) + "#{shop.description}"
       puts "Address:".colorize(:blue) + "#{shop.address}"
       puts "Hours:".colorize(:blue) + "#{shop.hours}"
