@@ -6,7 +6,6 @@ class BestCoffeeCinci::Scraper
     shops = doc.css(".article-body h2").each do |shop|
     name = shop.text.strip
     link = shop.css("a").attribute("href").value
-    # binding.pry
     BestCoffeeCinci::Shop.new(name, link)
     end 
   end
