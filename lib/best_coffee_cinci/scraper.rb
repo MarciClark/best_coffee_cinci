@@ -18,5 +18,3 @@ class BestCoffeeCinci::Scraper
     end
 
   end
-
-  # name = shop_selector.gsub(REGEXHERE, "")
