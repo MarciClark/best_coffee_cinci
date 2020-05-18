@@ -8,13 +8,13 @@ class BestCoffeeCinci::CLI
   def list_shops
     puts "Need a jolt?  Here are Cincinnati's Top 9 Coffee Shops:".colorize(:green)
     @shops = BestCoffeeCinci::Shop.all
-    @shops.each do |shop, index| 
-      puts "#{shop.name}"
+    @shops.each.with_index(1) do |shop, index| 
+      puts "#{index}.#{shop.name}"
     end
   end 
 
   def list_info(shop)
-      puts "Great choice!  Here's the info for: ".colorize(:green) + "#{shop.name}"
+      puts "Here's the info for: ".colorize(:green) + "#{shop.name}".colorize(:)
       puts "Description:".colorize(:blue) + "#{shop.description}"
       puts "Address:".colorize(:blue) + "#{shop.address}"
       puts "Hours:".colorize(:blue) + "#{shop.hours}"

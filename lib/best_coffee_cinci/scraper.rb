@@ -4,7 +4,7 @@ class BestCoffeeCinci::Scraper
     url = "https://cincinnatiusa.com/article/9-hot-coffee-shops"
     doc = Nokogiri::HTML(open(url))
     shops = doc.css(".article-body h2").each do |shop|
-    name = shop.text.strip
+    name = shop.text.strip.gsub(/[0-9,.]/, "")
     link = shop.css("a").attribute("href").value
     BestCoffeeCinci::Shop.new(name, link)
     end 
@@ -19,3 +19,4 @@ class BestCoffeeCinci::Scraper
 
   end
 
+  # name = shop_selector.gsub(REGEXHERE, "")
