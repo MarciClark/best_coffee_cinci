@@ -1,6 +1,6 @@
 class BestCoffeeCinci::Shop
   
-  attr_accessor :name, :hours, :description, :link, :address
+  attr_accessor :name, :description, :hours, :address, :link
   
   @@all = []
   
