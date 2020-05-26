@@ -19,14 +19,14 @@ class BestCoffeeCinci::CLI
       puts "Address:".colorize(:blue) + "#{shop.address}"
       puts "Hours:".colorize(:blue) + "#{shop.hours}"
   end
-  
+
   def get_user_input
     input = nil 
     while input != "exit"
       puts "Please pick the number of the shop you would like more info on, 'shops' to go back to the list, 'exit' to leave.".colorize(:yellow)
-      input = gets.strip.downcase 
+      input = gets.chomp.downcase 
       
-      if input.to_i > 0 
+      if input.to_i > 0 && input.to_i <= 9
         shop = @shops[input.to_i-1]
         BestCoffeeCinci::Scraper.scrape_info(shop)
         list_info(shop)
@@ -39,8 +39,58 @@ class BestCoffeeCinci::CLI
       end 
     end 
   end 
+
+
+  
+  # def get_user_input
+  #   input = nil 
+
+  #   case input
+
+  #   when input != "exit"
+  #     puts "Please pick the number of the shop you would like more info on, 'shops' to go back to the list, 'exit' to leave.".colorize(:yellow)
+      
+  #     input = gets.chomp
+      
+  #     if input.to_i <=9
+  #       shop = @shops[input.to_i-1]
+  #       BestCoffeeCinci::Scraper.scrape_info(shop)
+  #       list_info(shop)
+
+  #     elsif input == "shops"
+  #       list_shops
+  #     elsif input == "exit"
+  #       goodbye
+  #     else 
+  #       puts "I'm sorry, I do not recognize your response.".colorize(:light_red)
+  #     end 
+  #   end 
+  # end 
+
+
+  # def get_user_input
+  #   input = nil
+  #   puts "Please pick the number of the shop you would like more info on, 'shops' to go back to the list, 'exit' to leave.".colorize(:yellow)
+      
+  #   case input
+    
+  #   input = gets.chomp.to_i
+      
+  #   when input.to_i <=9
+  #     shop = @shops[input.to_i-1]
+  #     BestCoffeeCinci::Scraper.scrape_info(shop)
+  #     list_info(shop)
+
+  #   when input == "shops"
+  #     list_shops
+  #   when input == "exit"
+  #     goodbye
+  #   else 
+  #     puts "I'm sorry, I do not recognize your response.".colorize(:light_red)
+  #   end 
+  # end 
   
   def goodbye
     puts "Have a brew-tiful day!".colorize(:magenta)
-  end 
-end
+  end  
+end 
