@@ -1,3 +1,6 @@
+require 'word_wrap'
+require 'word_wrap/core_ext'
+
 class BestCoffeeCinci::CLI 
   
   def call
@@ -14,11 +17,13 @@ class BestCoffeeCinci::CLI
   end 
 
   def list_info(shop)
-      puts "Here's the info for: ".colorize(:green) + "#{shop.name}"
-      puts "Description:".colorize(:blue) + "#{shop.description}"
-      puts "Address:".colorize(:blue) + "#{shop.address}"
-      puts "Hours:".colorize(:blue) + "#{shop.hours}"
+    puts "ⅽ[ː̠̈ː̠̈]".colorize(:light_red) + "#{shop.name}".colorize(:color => :cyan, :background => :gray) + " ⅽ[ː̠̈ː̠̈]".colorize(:light_red)
+    puts "#{shop.description}".fit 100
+    puts "Address: ".colorize(:light_blue) + "#{shop.address}"
+    puts "Hours: ".colorize(:light_blue) + "#{shop.hours}"
   end
+
+  # "Description: ".colorize(:light_blue) +
 
   def get_user_input
     input = nil 
