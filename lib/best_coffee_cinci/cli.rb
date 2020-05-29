@@ -23,8 +23,6 @@ class BestCoffeeCinci::CLI
     puts "Hours: ".colorize(:light_blue) + "#{shop.hours}"
   end
 
-  # "Description: ".colorize(:light_blue) +
-
   def get_user_input
     input = nil 
     while input != "exit"
