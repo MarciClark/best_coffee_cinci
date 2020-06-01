@@ -7,6 +7,10 @@ require 'nokogiri'
 require 'open-uri'
 require 'pry'
 require 'colorize'
+require 'colorized_string'
+require 'word_wrap'
+require 'word_wrap/core_ext'
+
 
 module BestCoffeeCinci
   class Error < StandardError; end

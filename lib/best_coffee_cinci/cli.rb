@@ -1,6 +1,3 @@
-require 'word_wrap'
-require 'word_wrap/core_ext'
-
 class BestCoffeeCinci::CLI 
   
   def call
@@ -9,7 +6,7 @@ class BestCoffeeCinci::CLI
   end 
   
   def list_shops
-    puts "Need a jolt?  Here are Cincinnati's Top 9 Coffee Shops:".colorize(:green)
+    puts "Need a jolt?  Here are Cincinnati's Top 9 Coffee Shops:".colorize(:light_green)
     @shops = BestCoffeeCinci::Shop.all
     @shops.each.with_index(1) do |shop, index| 
       puts "#{index}.#{shop.name}"
@@ -17,8 +14,8 @@ class BestCoffeeCinci::CLI
   end 
 
   def list_info(shop)
-    puts "ⅽ[ː̠̈ː̠̈]".colorize(:light_red) + "#{shop.name}".colorize(:color => :cyan, :background => :gray) + " ⅽ[ː̠̈ː̠̈]".colorize(:light_red)
-    puts "#{shop.description}".fit 100
+    puts "ⅽ[ː̠̈]".colorize(:light_red) + "#{shop.name}".colorize(:cyan) + " ⅽ[ː̠̈]".colorize(:light_red)
+    puts "#{shop.description}".fit 112
     puts "Address: ".colorize(:light_blue) + "#{shop.address}"
     puts "Hours: ".colorize(:light_blue) + "#{shop.hours}"
   end
@@ -26,7 +23,7 @@ class BestCoffeeCinci::CLI
   def get_user_input
     input = nil 
     while input != "exit"
-      puts "Please pick the number of the shop you would like more info on, 'shops' to go back to the list, 'exit' to leave.".colorize(:yellow)
+      puts "Please pick the number of the shop you would like more info on, 'shops' to go back to the list, 'exit' to leave.".colorize(:light_yellow)
       input = gets.chomp.downcase 
       
       if input.to_i > 0 && input.to_i <= 9
@@ -44,6 +41,6 @@ class BestCoffeeCinci::CLI
   end 
   
   def goodbye
-    puts "Have a brew-tiful day!".colorize(:magenta)
+    puts "Have a brew-tiful day!".colorize(:light_magenta)
   end  
 end 
