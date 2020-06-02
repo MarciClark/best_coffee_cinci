@@ -16,5 +16,5 @@ class BestCoffeeCinci::Scraper
     shop.hours = doc.css(".hours").text
     shop.description = doc.css(".full-description").text.gsub("Show more", "")
     end
-  end
+  end 
 
