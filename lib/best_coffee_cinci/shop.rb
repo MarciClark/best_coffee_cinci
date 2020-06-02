@@ -18,4 +18,4 @@ class BestCoffeeCinci::Shop
   def get_info
     BestCoffeeCinci::Scraper.scrape_info if @info.empty?
   end 
-end 
+end  
