@@ -7,7 +7,8 @@ class BestCoffeeCinci::Shop
   def initialize(name, link)
     @name = name 
     @link = link
-    @@all << self
+    # @@all << self
+    save
   end 
   
   def self.all 
@@ -17,5 +18,9 @@ class BestCoffeeCinci::Shop
   
   def get_info
     BestCoffeeCinci::Scraper.scrape_info if @info.empty?
+  end 
+
+  def save
+    @@all << self 
   end 
 end  
