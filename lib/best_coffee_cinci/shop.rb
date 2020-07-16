@@ -7,7 +7,6 @@ class BestCoffeeCinci::Shop
   def initialize(name, link)
     @name = name 
     @link = link
-    # @@all << self
     save
   end 
   
